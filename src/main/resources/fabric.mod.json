@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "lubedrails",
+	"version": "${version}",
+	"name": "Rail Lubricant",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"trashoflevillage"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/rail-lubricant/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lubedrails/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.trashoflevillage.lubedrails.LubedRails"
+		],
+		"client": [
+			"io.github.trashoflevillage.lubedrails.LubedRailsClient"
+		],
+		"fabric-datagen": [
+			"io.github.trashoflevillage.lubedrails.LubedRailsDataGenerator"
+		]
+	},
+	"mixins": [
+		"lubedrails.mixins.json",
+		{
+			"config": "lubedrails.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

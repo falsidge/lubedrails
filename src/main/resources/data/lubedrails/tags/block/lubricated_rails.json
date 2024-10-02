@@ -1,0 +1,9 @@
+{
+  "values": [
+    "lubedrails:lubricated_rail",
+    "lubedrails:lubricated_powered_rail",
+    "lubedrails:lubricated_detector_rail",
+    "lubedrails:lubricated_activator_rail"
+  ],
+  "replace": false
+}
