@@ -9,9 +9,9 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/project/rail-lubricant/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/trashoflevillage/lubedrails"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/lubedrails/icon.png",
 	"environment": "*",
 	"entrypoints": {
