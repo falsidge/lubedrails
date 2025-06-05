@@ -1,0 +1,4 @@
+{
+    "parent": "minecraft:block/rail_corner",
+    "render_type": "cutout"
+}

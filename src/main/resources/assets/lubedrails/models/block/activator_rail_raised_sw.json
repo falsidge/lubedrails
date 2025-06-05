@@ -1,0 +1,4 @@
+{
+    "parent": "minecraft:block/activator_rail_raised_sw",
+    "render_type": "cutout"
+}

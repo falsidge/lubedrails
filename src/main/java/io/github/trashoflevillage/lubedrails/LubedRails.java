@@ -1,27 +1,25 @@
 package io.github.trashoflevillage.lubedrails;
 
+import com.mojang.logging.LogUtils;
 import io.github.trashoflevillage.lubedrails.blocks.ModBlocks;
 import io.github.trashoflevillage.lubedrails.items.ModItems;
-import net.fabricmc.api.ModInitializer;
-
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class LubedRails implements ModInitializer {
-	public static final String MOD_ID = "lubedrails";
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
+@Mod(LubedRails.MODID)
+public class LubedRails
+{
+    // Define mod id in a common place for everything to reference
+    public static final String MODID = "lubedrails";
+    // Directly reference a slf4j logger
+    public static final Logger LOGGER = LogUtils.getLogger();
 
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
-	}
+    public LubedRails(IEventBus modEventBus, ModContainer modContainer)
+    {
+        ModBlocks.registerModBlocks(modEventBus);
+        ModItems.registerModItems(modEventBus);
+    }
 }

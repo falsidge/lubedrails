@@ -1,0 +1,4 @@
+{
+    "parent": "minecraft:block/detector_rail",
+    "render_type": "cutout"
+}
